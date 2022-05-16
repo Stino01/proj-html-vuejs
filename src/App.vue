@@ -23,8 +23,10 @@ export default {
 
 <style lang="scss">
   @import "./style/general.scss";
+  @import "./style/vars.scss";  
 
   #app {
     position: relative;
+    background-color: $bg-purple;
   }
 </style>

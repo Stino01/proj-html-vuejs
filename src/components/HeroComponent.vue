@@ -29,7 +29,6 @@ export default {
 
         .left {
             width: 35vw;
-            background-color: $bg-purple;
         }
 
         .rigth {
@@ -37,7 +36,7 @@ export default {
 
             img {
                 width: 100%;
-                height: 100%;
+                height: 100vh;
             }
         }
 
@@ -56,7 +55,7 @@ export default {
 
             h1 {
                 color: $tx-white;
-                font-size: 5em;
+                font-size: 6em;
                 margin-bottom: 2vw;
             }
 
