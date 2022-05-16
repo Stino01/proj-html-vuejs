@@ -3,28 +3,28 @@
         <h2>Our consultants can help you</h2>
         <div class="info">
             <div class="data">
-                <div class="circle"></div>
+                <font-awesome-icon :icon="['fas', 'fa-chart-line']" class="circle"/>
                 <div class="consult">
                     <h3>Statistical Consulting</h3>
                     <p>When, while lovely valley teems with vapour around meand eridian sun strikes the upper impenetrable foliage of my trees, and but a</p>
                 </div>
             </div>
             <div class="data">
-                <div class="circle"></div>
+                <font-awesome-icon :icon="['fas', 'fa-bullhorn']" class="circle"/>
                 <div class="consult">
                     <h3>Digital Consulting</h3>
                     <p>When, while lovely valley teems with vapour around meand eridian sun strikes the upper impenetrable foliage of my trees, and but a</p>
                 </div>
             </div>
             <div class="data">
-                <div class="circle"></div>
+                <font-awesome-icon :icon="['fas', 'fa-wallet']" class="circle"/>
                 <div class="consult">
                     <h3>Banking Consulting</h3>
                     <p>When, while lovely valley teems with vapour around meand eridian sun strikes the upper impenetrable foliage of my trees, and but a</p>
                 </div>
             </div>
             <div class="data">
-                <div class="circle"></div>
+                <font-awesome-icon :icon="['fas', 'fa-bullseye']" class="circle"/>
                 <div class="consult">
                     <h3>Enterprice Consulting</h3>
                     <p>When, while lovely valley teems with vapour around meand eridian sun strikes the upper impenetrable foliage of my trees, and but a</p>
@@ -67,10 +67,9 @@ export default {
                 display: flex;
 
                 .circle {
-                    width: 150px;
-                    height: 50px;
                     border-radius: 50%;
-                    background-color: red;
+                    padding: 1em 1em;
+                    background-color: $bg-red-ligth;
                 }
 
                 .consult {
