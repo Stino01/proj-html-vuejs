@@ -12,11 +12,6 @@
                 </div>
             </div>
         </div>
-        <div class="started">
-            <h2>We help to deliver the business case</h2>
-            <p>When, while lovely valley teems with vapour around meand eridian sun strikes the upper impenetrable foliage of my trees, and but a thousand unknown</p>
-            <span>Get started</span>
-        </div>
     </div>
 
 </template>
