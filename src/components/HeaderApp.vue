@@ -3,12 +3,12 @@
         <img src="../assets/img/logotype.png" alt="logo">
         <nav>
             <ul>
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Project</a></li>
-                <li><a href="#">Service</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Contact</a></li>
+                <li class="active">Home</li>
+                <li>About</li>
+                <li>Projectli</li>
+                <li>Service</li>
+                <li>Blog</li>
+                <li>Contact</li>
             </ul>
         </nav>
     </header>
@@ -43,20 +43,18 @@ export default {
             display: flex;
             list-style-type: none;
 
-            li {
-                padding: 1.5em 1em;
+            .active {
+                color: white;
+                border-top: 2px solid white;
+            }
 
-                a {
-                    text-decoration: none;
-                    color: $tx-grey;
-                    text-transform: uppercase;
-                }
+            li {
+                padding: 1.5em 0;
+                margin: 0 1em;
+                color: $tx-grey;
+                text-transform: uppercase;
+                cursor: pointer;
             }
         }
-    }
-
-    .active {
-        color: $tx-white;
-        border-top: 2px solid $border-white;
     }
 </style>

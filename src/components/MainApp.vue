@@ -27,6 +27,7 @@
             </div>
         </div>
         <blog-component/>
+        <started-component/>
     </main>
 </template>
 
@@ -36,6 +37,7 @@ import ConsultComponent from "./ConsultComponent.vue"
 import AboutComponent from "./AboutComponents.vue"
 import ProjectComponent from './ProjectComponent.vue'
 import BlogComponent from './BlogComponent.vue'
+import StartedComponent from './StartedComponent.vue'
 
 export default {
     name: "MainApp",
@@ -45,6 +47,7 @@ export default {
         AboutComponent,
         ProjectComponent,
         BlogComponent,
+        StartedComponent,
     }
 }
 </script>
