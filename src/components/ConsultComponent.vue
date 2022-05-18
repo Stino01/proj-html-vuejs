@@ -1,6 +1,7 @@
 <template>
-    <div class="type">
+    <div class="type"> 
         <h2>Our consultants can help you</h2>
+        <div class="line"></div>
         <div class="info">
             <div class="data">
                 <font-awesome-icon :icon="['fas', 'fa-chart-line']" class="circle"/>
@@ -47,10 +48,18 @@ export default {
     .type {
         background-color: $bg-white;
 
+        .line {
+                display: inline-block;
+                width: 900px;
+                height: 3px;
+                background-color: $bg-green-ligth;
+                border-radius: 2px;
+        }
+
         h2 {
+            display: inline-block;
             text-transform: uppercase;
-            padding-left: 12em;
-            padding-top: 4em;
+            padding: 4em 2em 2em 12em;
         }
 
         .info {

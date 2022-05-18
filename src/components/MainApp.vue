@@ -82,6 +82,11 @@ export default {
             background-color: $bg-red-ligth;
             text-transform: uppercase;
             padding: 1em 2.5em;
+            transition: .5s;
+    
+            &:hover {
+                box-shadow: inset 0 0 0 2em $bg-purple;
+            }
         }
     }
 

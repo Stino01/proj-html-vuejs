@@ -1,5 +1,6 @@
 <template>
     <div class="project">
+        <div class="line"></div>
         <h3>Project</h3>
         <div class="arrow">
             <h2>Our expert trusted consultants help clients</h2>
@@ -21,6 +22,7 @@
         </div>
         <div class="testimonial">
             <h3>Testimonial</h3>
+            <div class="line"></div>
             <h2>What's the customer say about our work</h2>
             <div class="started">
 
@@ -43,7 +45,17 @@ export default {
         color: $tx-white;
         text-transform: uppercase;
 
+            .line {
+                display: inline-block;
+                width: 50px;
+                height: 3px;
+                background-color: $bg-green-ligth;
+                border-radius: 2px;
+                margin-right: 1em;
+            }
+
         h3 {
+            display: inline-block;
             font-weight: 300;
         }
 
@@ -62,6 +74,11 @@ export default {
                 background-color: $bg-grey;
                 padding: 1em;
                 margin: 0 2px;
+                transition: .5s;
+    
+                &:hover {
+                    background-color: $bg-green-ligth;
+                }
             }
         }
 
@@ -86,7 +103,16 @@ export default {
             align-items: flex-end;
             padding-top: 10em;
 
+            .line {
+                display: inline-block;
+                width: 50px;
+                height: 3px;
+                background-color: $bg-green-ligth;
+                border-radius: 2px;
+            }
+
             h3 {
+                display: inline-block;
                 align-self: center;
             }
 

@@ -6,6 +6,7 @@
             </div>
             <div class="rigth">
                 <div class="message">
+                    <div class="line"></div>
                     <h3>About Us</h3>
                     <h1>We make your startegy work</h1>
                     <p>When, while lovely valley teems with vapour around meand eridian sun strikes the upper impenetrable foliage of my trees, and but a thousand unknown plants are noticed by when I hear the buzz of the little world among the stalks, and grow familiar indescribable forms of the insects and flies, then i fell the presence of the Almighty</p>
@@ -47,7 +48,17 @@ export default {
                 transform: translateY(-50%);
                 left: 3em;
 
+                .line {
+                    display: inline-block;
+                    width: 50px;
+                    height: 3px;
+                    background-color: $bg-green-ligth;
+                    border-radius: 2px;
+                    margin-right: 1em;
+                }
+
                 h3 {
+                    display: inline-block;
                     color: $tx-white;
                     text-transform: uppercase;
                 }

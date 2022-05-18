@@ -54,6 +54,12 @@ export default {
                 color: $tx-grey;
                 text-transform: uppercase;
                 cursor: pointer;
+                border-top: 0 solid white;
+                transition: .2s;
+
+                &:hover {
+                    border-top: 2px solid white;
+                }
             }
         }
     }

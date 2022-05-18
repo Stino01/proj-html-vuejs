@@ -1,5 +1,6 @@
 <template>
     <div class="blog">
+        <div class="line"></div>
         <h3>Blog</h3>
         <div class="tx">
             <h2>The recent news you must read it</h2>
@@ -39,7 +40,17 @@ export default {
         padding: 15em 7.5em;
         color: $tx-white;
 
+        .line {
+            display: inline-block;
+            width: 50px;
+            height: 3px;
+            background-color: $bg-green-ligth;
+            border-radius: 2px;
+            margin-right: 1em;
+        }
+
         h3 {
+            display: inline-block;
             font-weight: 300;
             text-transform: uppercase;
         }
@@ -60,6 +71,11 @@ export default {
                 padding: 1em 3em;
                 color: $tx-black;
                 background-color: $bg-green;
+                transition: .5s;
+
+                &:hover {
+                    box-shadow: inset 0 0 0 2em $bg-red-ligth;
+                }
             }
         }
 
@@ -84,6 +100,7 @@ export default {
                     position: absolute;
                     right: 0;
                     bottom: -6em;
+                    transition: 0.5s;
 
                     span {
                         color: $tx-red;
@@ -99,6 +116,11 @@ export default {
                         color: $tx-grey;
                     }
                 }
+            }
+
+            &:hover .message {
+                background-color: $bg-green-ligth;
+                bottom: -7em;
             }
         }
     }

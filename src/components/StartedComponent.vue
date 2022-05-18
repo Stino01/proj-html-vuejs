@@ -21,6 +21,10 @@ export default {
     .getstarted {
         position: relative;
 
+        img {
+            width: 100%;
+        }
+
         .text {
             position: absolute;
             top: 50%;
@@ -47,6 +51,11 @@ export default {
                 background-color: $bg-purple;
                 color: $tx-white;
                 text-transform: uppercase;
+                transition: 0.5s;
+
+                &:hover {
+                    box-shadow: inset 0 0 0 2em $bg-green-ligth;
+                }
             }
         }
     }
