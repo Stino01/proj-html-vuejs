@@ -28,6 +28,9 @@
         </div>
         <blog-component/>
         <started-component/>
+        <div class="goup" @click="goUp">
+            <font-awesome-icon :icon="['fas', 'fa-arrow-up']" class=""/>
+        </div>
     </main>
 </template>
 
@@ -48,13 +51,38 @@ export default {
         ProjectComponent,
         BlogComponent,
         StartedComponent,
+    },
+    methods: {
+        goUp: function() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+            })
+        }
     }
 }
 </script>
 
 <style lang="scss" scoped>
     @import "../style/vars.scss";
+    main {
+        position: relative;
 
+        .goup {
+            position: fixed;
+            bottom: 3em;
+            right: 5em;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: $bg-white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            border: 1px solid black;
+        }
+    }
     .started {
         display: flex;
         width: 90vw;
