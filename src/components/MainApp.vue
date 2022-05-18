@@ -10,20 +10,10 @@
         </div>
         <project-component/>
         <div class="started rigth">
-            <div class="data">
-                <p>When, while lovely valley teems with vapour around meand eridian sun strikes the upper impenetrable foliage of my trees, and but a thousand unknown plants are noticed by when I hear the buzz of the little</p>
-                <h3>Vera Duncan</h3>
-                <p>Amazon Inc.</p>
-            </div>
-            <div class="data">
-                <p>When, while lovely valley teems with vapour around meand eridian sun strikes the upper impenetrable foliage of my trees, and but a thousand unknown plants are noticed by when I hear the buzz of the little</p>
-                <h3>Vera Duncan</h3>
-                <p>Amazon Inc.</p>
-            </div>
-            <div class="data">
-                <p>When, while lovely valley teems with vapour around meand eridian sun strikes the upper impenetrable foliage of my trees, and but a thousand unknown plants are noticed by when I hear the buzz of the little</p>
-                <h3>Vera Duncan</h3>
-                <p>Amazon Inc.</p>
+            <div class="data" v-for="(item, index) in dati" :key="index">
+                <p>{{item.text}}</p>
+                <h3>{{item.name}}</h3>
+                <p>{{item.agency}}</p>
             </div>
         </div>
         <blog-component/>
@@ -35,6 +25,7 @@
 </template>
 
 <script>
+import data from "../data.js"
 import HeroComponent from "./HeroComponent.vue"
 import ConsultComponent from "./ConsultComponent.vue"
 import AboutComponent from "./AboutComponents.vue"
@@ -51,6 +42,11 @@ export default {
         ProjectComponent,
         BlogComponent,
         StartedComponent,
+    },
+    data() {
+        return {
+            dati: data.datiTestimonial,
+        }
     },
     methods: {
         goUp: function() {

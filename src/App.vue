@@ -28,5 +28,6 @@ export default {
   #app {
     position: relative;
     background-color: $bg-purple;
+    min-width: 1500px;
   }
 </style>

@@ -3,32 +3,11 @@
         <h2>Our consultants can help you</h2>
         <div class="line"></div>
         <div class="info">
-            <div class="data">
-                <font-awesome-icon :icon="['fas', 'fa-chart-line']" class="circle"/>
+            <div class="data" v-for="(item, index) in dati" :key="index">
+                <font-awesome-icon :icon="['fas', item.fa]" class="circle"/>
                 <div class="consult">
-                    <h3>Statistical Consulting</h3>
-                    <p>When, while lovely valley teems with vapour around meand eridian sun strikes the upper impenetrable foliage of my trees, and but a</p>
-                </div>
-            </div>
-            <div class="data">
-                <font-awesome-icon :icon="['fas', 'fa-bullhorn']" class="circle"/>
-                <div class="consult">
-                    <h3>Digital Consulting</h3>
-                    <p>When, while lovely valley teems with vapour around meand eridian sun strikes the upper impenetrable foliage of my trees, and but a</p>
-                </div>
-            </div>
-            <div class="data">
-                <font-awesome-icon :icon="['fas', 'fa-wallet']" class="circle"/>
-                <div class="consult">
-                    <h3>Banking Consulting</h3>
-                    <p>When, while lovely valley teems with vapour around meand eridian sun strikes the upper impenetrable foliage of my trees, and but a</p>
-                </div>
-            </div>
-            <div class="data">
-                <font-awesome-icon :icon="['fas', 'fa-bullseye']" class="circle"/>
-                <div class="consult">
-                    <h3>Enterprice Consulting</h3>
-                    <p>When, while lovely valley teems with vapour around meand eridian sun strikes the upper impenetrable foliage of my trees, and but a</p>
+                    <h3>{{item.title}}</h3>
+                    <p>{{item.text}}</p>
                 </div>
             </div>
         </div>
@@ -36,9 +15,15 @@
 </template>
 
 <script>
+import data from "../data.js"
 
 export default {
     name: "ConsultComponent",
+    data() {
+        return {
+            dati: data.datiConsulting,
+        }
+    }
 }
 </script>
 
