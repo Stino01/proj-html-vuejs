@@ -3,13 +3,7 @@
         <img src="../assets/img/logotype.png" alt="logo">
         <nav>
             <ul>
-                <li v-for="(item, index) in info" :key="index" :class="{'active': index === currentIndex}" @click="item.active ? dropdown(index) : null">
-                    <a href="#">{{item.text}}</a>
-                    <font-awesome-icon :icon="['fas', 'fa-chevron-down']" v-if="item.active" class="icon"/>
-                    <div class="dropdown-menu" v-if="toggle && item.active">
-                        <p v-for="el in item.dropdown" :key="el.id">{{el.title}}</p>
-                    </div>
-                </li>
+                <app-list :item="item" v-for="(item, index) in list" :key="index"/>
             </ul>
         </nav>
     </header>
@@ -17,25 +11,21 @@
 
 <script>
 import data from "../data.js"
+import AppList from "./AppList.vue"
 
 export default {
     name: "HeaderApp",
+    components: {
+        AppList
+    },
     data() {
         return {
-            info: data.datiHeader,
+            list: data.datiHeader,
             currentIndex: 0,
             toggle: false,
             active: false,
         }
     },
-    methods: {
-        dropdown: function(i){
-            this.currentIndex = i
-            this.toggle = !this.toggle
-
-            return this.currentIndex            
-        }
-    }
 }
 </script>
 
