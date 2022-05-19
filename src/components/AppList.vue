@@ -1,18 +1,11 @@
 <template>
-    <li @click="item.active ? dropdown(index) : null">
+    <li @click="item.active ? dropdown(index) : null" >
         <a href="#">{{item.text}}</a>
         <font-awesome-icon :icon="['fas', 'fa-chevron-down']" v-if="item.active" class="icon"/>
         <div class="dropdown-menu" v-if="toggle && item.active">
             <p v-for="el in item.dropdown" :key="el.id">{{el.title}}</p>
         </div>
     </li>
-            <!-- <li v-for="(item, index) in info" :key="index" :class="{'active': index === currentIndex}" @click="item.active ? dropdown(index) : null">
-                <a href="#">{{item.text}}</a>
-                <font-awesome-icon :icon="['fas', 'fa-chevron-down']" v-if="item.active" class="icon"/>
-                <div class="dropdown-menu" v-if="toggle && item.active">
-                    <p v-for="el in item.dropdown" :key="el.id">{{el.title}}</p>
-                </div>
-            </li> -->
 </template>
 
 <script>
@@ -26,10 +19,7 @@ export default {
     },
     methods: {
         dropdown: function(){
-            //this.currentIndex = i
-            this.toggle = !this.toggle
-
-            //return this.currentIndex            
+            this.toggle = !this.toggle           
         }
     }
 }
@@ -41,12 +31,6 @@ export default {
     ul {
         display: flex;
         list-style-type: none;
-
-        .active {
-            color: white;
-            border-top: 2px solid white;
-            padding: 23px 0;
-        }
 
         li {
             padding: 25px 0;

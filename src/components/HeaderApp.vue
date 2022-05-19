@@ -3,7 +3,7 @@
         <img src="../assets/img/logotype.png" alt="logo">
         <nav>
             <ul>
-                <app-list :item="item" v-for="(item, index) in list" :key="index"/>
+                <app-list :item="item" :index="index" v-for="(item, index) in list" :key="index"/>
             </ul>
         </nav>
     </header>
@@ -21,9 +21,6 @@ export default {
     data() {
         return {
             list: data.datiHeader,
-            currentIndex: 0,
-            toggle: false,
-            active: false,
         }
     },
 }

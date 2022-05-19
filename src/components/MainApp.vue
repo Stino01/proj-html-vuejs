@@ -11,9 +11,13 @@
         <project-component/>
         <div class="started rigth">
             <div class="data" v-for="(item, index) in dati" :key="index">
-                <p>{{item.text}}</p>
-                <h3>{{item.name}}</h3>
-                <p>{{item.agency}}</p>
+                <img :src="item.image" alt="">
+                <div class="test">
+                    <p>{{item.text}}</p>
+                    <h3>{{item.name}}</h3>
+                    <p>{{item.agency}}</p>
+                </div>
+
             </div>
         </div>
         <blog-component/>
@@ -122,16 +126,35 @@ export default {
 
         .data {
             width: calc(100% / 3);
-            padding: 3em 5em;
+            position: relative;
 
-            p {
+            img {
+                width: 100%;
+                opacity: 0;
+                transition: .2s;
+            }
+
+            &:hover img {
+                opacity: 1;
+            }
+
+            .test {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+
+                p {
                 color: $tx-grey;
                 width: 100%;
+                }
+
+                h3 {
+                    padding-top: 3em;
+                }
             }
 
-            h3 {
-                padding-top: 3em;
-            }
+
         }
     }
 </style>
