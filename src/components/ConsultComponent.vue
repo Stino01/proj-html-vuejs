@@ -52,7 +52,7 @@ export default {
             flex-wrap: wrap;
             justify-content: space-between;
             width: 65vw;
-            padding: 2em 0;
+            padding: 2em 0 6em 0;
             margin: 0 auto;
 
             .data {

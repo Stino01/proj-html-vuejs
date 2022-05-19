@@ -7,7 +7,7 @@
             <span>View all</span>
         </div>
         <div class="info">
-            <div class="holder">
+            <div class="holder uno">
                 <img src="../assets\img\startup-business-people-and-strategy-board-PAJ3P9K-1390x1042.jpg" alt="">
                 <div class="message">
                     <span>july 4, 2019</span>
@@ -15,7 +15,7 @@
                     <p>When, while lovely valley teems with vapour around meand eridian sun strikes the upper impenetrable foliage of my trees, and but a ...</p>
                 </div>
             </div>
-            <div class="holder">
+            <div class="holder due">
                 <img src="../assets\img\business-people-working-together-on-project-and-5FHSKBL-1390.jpg" alt="">
                 <div class="message">
                     <span>july 4, 2019</span>
@@ -117,7 +117,16 @@ export default {
                     }
                 }
             }
+        }    
+        
+        .uno {
+            &:hover .message {
+                background-color: $bg-green-ligth;
+                bottom: -7em;
+            }
+        }
 
+        .due {
             &:hover .message {
                 background-color: $bg-green-ligth;
                 bottom: -7em;
